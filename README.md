@@ -12,7 +12,7 @@ Does what it says on the tin.
 Returns a normalised score (often referred to as a 'z-value') given a raw score and the mean and sd of a normal distribution.
 
 3. `Integral(f,a,b)`
-Uses Simpson's 3/8 rule to approximate the definite integral of f between a and b. In other words, this gives you:  ![alt text](http://upload.wikimedia.org/math/d/5/4/d54d833d0f27fcb72ae83e80d006f571.png "Definite integral betweem a and b")
+Uses Simpson's 3/8 rule to approximate the definite integral of f between a and b. In other words, this gives you and approximation of:  ![alt text](http://upload.wikimedia.org/math/d/5/4/d54d833d0f27fcb72ae83e80d006f571.png "Definite integral betweem a and b")
 
 4. `StandardNormalPdf(x)`
 Does what it says on the tin.
