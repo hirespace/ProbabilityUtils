@@ -171,8 +171,7 @@ namespace HireSpaceScheduledJobs.Utils
         public static double ProbabilityLessThanX(double x, double mean, double sd)
         {
             var z = Z(x, mean, sd);
-            var integral = Integral(StandardNormalPdf, mean, z);
-            return integral + 0.5;
+            return ProbabilityLessThanX(z);
         }
     }
 }
