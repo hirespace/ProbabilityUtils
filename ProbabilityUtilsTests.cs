@@ -42,6 +42,24 @@ namespace HireSpaceScheduledJobs.Test
             Assert.LessOrEqual(p, 1);
             Assert.GreaterOrEqual(p, 0);
         }
+        
+        /// <summary>
+        /// Checks that standardised and non-standardised functions agree.
+        /// </summary>
+        [Test]
+        public void ProbabilitiesAreEqual_ShouldReturnTrue()
+        {
+            var mean = 6.32;
+            var sd = 0.47;
+
+            var x = 6;
+            var z = ProbabilityUtils.Z(x, mean, sd);
+
+            var p1 = ProbabilityUtils.ProbabilityLessThanX(z);
+            var p2 = ProbabilityUtils.ProbabilityLessThanX(x, mean, sd);
+
+            Assert.AreEqual(p1, p2);
+        }
 
         /// <summary>
         /// Checks values returned by Integral method with the StandardNormalPdf function passed in against values read from a normal distribution table.
